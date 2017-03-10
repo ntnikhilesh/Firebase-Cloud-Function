@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "staging": "cloud-function-1aae2",
+    "default": "cloud-function-1aae2"
+  }
+}
