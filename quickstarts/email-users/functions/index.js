@@ -20,14 +20,17 @@ const nodemailer = require('nodemailer');
 // Configure the email transport using the default SMTP transport and a GMail account.
 // For other types of transports such as Sendgrid see https://nodemailer.com/transports/
 // TODO: Configure the `gmail.email` and `gmail.password` Google Cloud environment variables.
-const gmailEmail = encodeURIComponent(functions.config().gmail.email);
-const gmailPassword = encodeURIComponent(functions.config().gmail.password);
+//firebase functions:config:set gmail.email='1ntnikhilesh@gmail.com' gmail.password=9450790636;
+const gmailEmail = encodeURIComponent('nikhilesh.tripathi@cognitiveclouds.com');
+const gmailPassword = encodeURIComponent('9450790636');
 const mailTransport = nodemailer.createTransport(
     `smtps://${gmailEmail}:${gmailPassword}@smtp.gmail.com`);
 
 // Your company name to include in the emails
 // TODO: Change this to your app or company name to customize the email sent.
-const APP_NAME = 'Cloud Storage for Firebase quickstart';
+const APP_NAME = 'CC';
+
+
 
 // [START sendWelcomeEmail]
 /**
@@ -65,6 +68,7 @@ exports.sendByeEmail = functions.auth.user().onDelete(event => {
 
 // Sends a welcome email to the given user.
 function sendWelcomeEmail(email, displayName) {
+  console.log(email);
   const mailOptions = {
     from: '"MyCompany" <noreply@firebase.com>',
     to: email

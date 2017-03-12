@@ -72,9 +72,23 @@
      * TODO(DEVELOPER): Paste the initialization snippet from: Firebase Console > Overview > Add Firebase to your web app. *
      *********************************************************************************************************************** -->
 
-<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
 <script>
   // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDQ_LzqE9sqyhI1XwWi9AeXqoZs-DUJc8Q",
+    authDomain: "cloud-function-1aae2.firebaseapp.com",
+    databaseURL: "https://cloud-function-1aae2.firebaseio.com",
+    storageBucket: "cloud-function-1aae2.appspot.com",
+    messagingSenderId: "709893116882"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<!--<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+<script>
+ 
   var config = {
     apiKey: "AIzaSyAu14Qhq_t4GbyZlRwVlFVLellEo4Gjmzs",
     authDomain: "functions-email-confirmation.firebaseapp.com",
@@ -83,7 +97,7 @@
     messagingSenderId: "207174568617"
   };
   firebase.initializeApp(config);
-</script>
+</script> -->
 
 <script src="main.js"></script>
 </body>
